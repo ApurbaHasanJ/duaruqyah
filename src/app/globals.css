@@ -2,19 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* primary color: #1FA45B */
+
+.bg-primary{
+  @apply bg-[#1FA45B] hover:bg-[#1fa45be2] text-white p-3
+}
+
+.text-primary{
+  @apply text-[#1FA45B]
+}
+.text-secondary{
+  @apply text-[#7E7E7E]
+}
+
+
+.nav-item{
+  @apply p-3 rounded-full bg-sky-50 w-fit drop-shadow-sm;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* --background-end-rgb: 255, 255, 255; */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
+/* input:focus {
+  border-color: #1FA45B; 
+  outline: none; 
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
