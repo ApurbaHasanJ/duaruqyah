@@ -1,3 +1,4 @@
+import Settings from "@/components/Settings/Settings";
 import Image from "next/image";
 import React from "react";
 import { IoIosSearch } from "react-icons/io";
@@ -5,7 +6,7 @@ import { IoIosSearch } from "react-icons/io";
 const page = () => {
   return (
     <section className="w-full mt-4 flex gap-7">
-      <div className="bg-white max-w-[429px] w-full rounded-[10px]">
+      <div className="bg-white max-w-[350px] w-full rounded-[10px]">
         <h3 className="bg-primary font-semibold rounded-t-[10px] text-[17px] text-center">
           Categories
         </h3>
@@ -122,6 +123,7 @@ const page = () => {
           adhaan
         </h4>
       </div>
+      <Settings/>
     </section>
   );
 };

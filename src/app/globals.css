@@ -19,7 +19,7 @@
 }
 
 .nav-item {
-  @apply p-3 rounded-full bg-sky-50 w-fit drop-shadow-sm;
+  @apply p-2 rounded-full bg-sky-50 w-fit drop-shadow-sm;
 }
 
 :root {
