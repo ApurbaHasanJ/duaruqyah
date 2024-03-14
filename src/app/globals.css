@@ -4,19 +4,21 @@
 
 /* primary color: #1FA45B */
 
-.bg-primary{
-  @apply bg-[#1FA45B] hover:bg-[#1fa45be2] text-white p-3
+.bg-primary {
+  @apply bg-[#1FA45B] hover:bg-[#1fa45be2] text-white p-3;
 }
 
-.text-primary{
-  @apply text-[#1FA45B]
+.text-primary {
+  @apply text-[#1FA45B];
 }
-.text-secondary{
-  @apply text-[#7E7E7E]
+.text-secondary {
+  @apply text-[#7E7E7E];
+}
+.text-desc {
+  @apply text-[#393939];
 }
 
-
-.nav-item{
+.nav-item {
   @apply p-3 rounded-full bg-sky-50 w-fit drop-shadow-sm;
 }
 
