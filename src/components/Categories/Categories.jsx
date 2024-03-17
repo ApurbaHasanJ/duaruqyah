@@ -45,13 +45,13 @@ const Categories = ({ params, searchParams, setShowCategories }) => {
     );
   });
 
-  // if (searchParams.cat) {
-  //   // Scroll to the dua element with the corresponding id
-  //   const categoryElement = document.getElementById("cat" + searchParams.cat);
-  //   if (categoryElement) {
-  //     categoryElement.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }
+  if (searchParams.cat) {
+    // Scroll to the dua element with the corresponding id
+    const categoryElement = document.getElementById("cat" + searchParams.cat);
+    if (categoryElement) {
+      categoryElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <div className="bg-white max-w-[350px] lg:min-w-[350px] w-full rounded-[10px] shadow">
