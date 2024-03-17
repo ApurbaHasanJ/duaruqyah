@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <link rel="icon" href="/logo.png" sizes="any" />
       </head>
-      <body className={`${inter.className} bg-slate-100 px-10 py-6 flex gap-6`}>
+      <body className={`${inter.className} fixed left-0 right-0 bg-slate-100 px-10 py-6 flex gap-6`}>
         <Navbar />
         <div className="w-full">
           <PageHeader />

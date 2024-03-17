@@ -10,14 +10,14 @@ const PageHeader = () => {
       <form action="#">
         <div className="relative bg-white rounded-md">
           <input
-            className="px-3 p-2 rounded-md placeholder:text-[12px] focus:outline-none w-full max-w-[371px] min-w-[260px]"
+            className="p-3 px-4 rounded-md placeholder:text-sm focus:outline-none w-full max-w-[371px] min-w-[300px] focus:outline-1 focus:outline-[#1FA45B]"
             type="search"
             placeholder="Search by Dua Name"
             name="search"
             id="search"
           />
 
-          <span className="absolute right-1 top-1/2 -translate-y-1/2 w-11 h-8 bg-gray-200 flex justify-center items-center rounded-md">
+          <span className="absolute right-1 top-1/2 -translate-y-1/2 w-14 h-10 bg-gray-200 flex justify-center items-center rounded-md">
             <IoIosSearch className=" text-slate-500 drop-shadow-2xl rounded-md text-xl" />
           </span>
         </div>

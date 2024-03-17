@@ -6,7 +6,7 @@ import LogoAndName from "@/components/LogoAndName";
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-col items-center justify-between h-[calc(100dvh-48px)] px-5 py-6 bg-white rounded-3xl drop-shadow-sm">
+    <nav className="flex flex-col items-center justify-between h-[calc(100dvh-48px)] px-5 py-6 bg-white rounded-3xl shadow">
       <LogoAndName/>
       <ul className="flex flex-col gap-5">
         <li className="nav-item">
