@@ -23,11 +23,18 @@ const Duas = ({ params, searchParams }) => {
     }
   };
 
+  // Scroll to the dua element with the corresponding id
+  const duaElement = document.getElementById("active-dua" + searchParams.dua);
+  if (duaElement) {
+    duaElement.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
     <ul className="ml-3 grid grid-cols-1 gap-5 mt-5">
       {filteredDuas.map((dua, index) => (
         <li
           key={index}
+          id={"active-dua" + dua?.dua_id}
           className="flex gap-[3px] items-baseline"
           onClick={() => handleDuaClick(dua?.dua_id)}>
           <Image width={15} height={15} src="/duaarrow.svg" alt="dua.svg" />

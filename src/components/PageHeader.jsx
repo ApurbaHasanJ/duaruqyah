@@ -7,7 +7,7 @@ const PageHeader = () => {
     <header className="flex items-center justify-between w-full drop-shadow-sm">
       <h3 className="text-[22px] font-medium">Duas Page</h3>
       <div className="lg:w-[40%] flex items-center justify-between gap-7">
-      <form action="#">
+      <form action="#" >
         <div className="relative bg-white rounded-md">
           <input
             className="p-3 px-4 rounded-md placeholder:text-sm focus:outline-none w-full max-w-[371px] min-w-[300px] focus:outline-1 focus:outline-[#1FA45B]"
