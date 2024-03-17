@@ -14,11 +14,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/logo.png" sizes="any" />
-      </head>
       <body className={`${inter.className} fixed left-0 right-0 bg-slate-100`}>
         <div className="lg:hidden bg-white z-[1000]">
           <PageHeader />
