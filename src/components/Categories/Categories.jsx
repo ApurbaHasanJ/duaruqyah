@@ -45,7 +45,7 @@ const Categories = ({ params, searchParams, setShowCategories }) => {
     );
   });
 
-  if (searchParams.cat) {
+  if (typeof window !== 'undefined' && searchParams.cat) {
     // Scroll to the dua element with the corresponding id
     const categoryElement = document.getElementById("cat" + searchParams.cat);
     if (categoryElement) {
@@ -97,7 +97,7 @@ const Categories = ({ params, searchParams, setShowCategories }) => {
               <div key={category?.id} id={"cat" + category?.cat_id}>
                 <div
                   onClick={() => handleCategoryClick(category)}
-                  className="flex items-center h-auto justify-between p-2 rounded-[10px] hover:bg-[#E8F0F5] transition-colors duration-500">
+                  className="flex items-center justify-between p-2 rounded-[10px] hover:bg-[#E8F0F5] transition-colors duration-500">
                   <div className="flex items-center gap-3">
                     <Image
                       className="rounded-lg"

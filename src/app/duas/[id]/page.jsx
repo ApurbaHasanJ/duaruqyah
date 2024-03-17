@@ -19,7 +19,7 @@ const Dua = ({ params, searchParams }) => {
         </h4>
         <Contents searchParams={searchParams} params={params} />
       </div>
-      <div className="lg:block hidden w-full">
+      <div className="lg:block hidden">
         <Settings />
       </div>
     </section>
