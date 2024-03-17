@@ -11,11 +11,11 @@ const SubCategories = ({ params, searchParams }) => {
   const filteredCategories = subCategories.filter(
     (category) => category.cat_id == searchParams.cat
   );
-  //   console.log({ filteredCategories });
+  //   // console.log({ filteredCategories });
 
   // update url
   const handleSubCategoryClick = (subCatId) => {
-    console.log(subCatId);
+    // console.log(subCatId);
     if (subCatId) {
       // Check if category data is available
       const newCatName = params.id.toLowerCase().replace(/%26/g, "&");

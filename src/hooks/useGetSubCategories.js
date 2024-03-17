@@ -15,12 +15,12 @@ const useGetSubCategories = () => {
         return response.json();
       })
       .then((data) => {
-        // console.log(data);
+          // console.log(data);
         setSubCategories(data);
         setIsLoading(false); 
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
+        // console.error("Error fetching data:", error);
         setError(error);
       });
   }, []);

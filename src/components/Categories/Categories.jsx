@@ -4,8 +4,10 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import SubCategories from "./SubCategories";
+import { FaArrowLeft } from "react-icons/fa6";
+import { RxCross2 } from "react-icons/rx";
 
-const Categories = ({ params, searchParams }) => {
+const Categories = ({ params, searchParams, setShowCategories }) => {
   const [query, setQuery] = useState("");
   const [categories, setCategories] = useState([]);
   const router = useRouter();
@@ -17,7 +19,7 @@ const Categories = ({ params, searchParams }) => {
         setCategories(data);
       })
       .catch((error) => {
-        console.error("Error fetching data:", error);
+        // console.error("Error fetching data:", error);
       });
   }, []);
 
@@ -45,7 +47,7 @@ const Categories = ({ params, searchParams }) => {
 
   if (searchParams.cat) {
     // Scroll to the dua element with the corresponding id
-    const categoryElement = document.getElementById("cat"+searchParams.cat);
+    const categoryElement = document.getElementById("cat" + searchParams.cat);
     if (categoryElement) {
       categoryElement.scrollIntoView({ behavior: "smooth" });
     }
@@ -53,10 +55,16 @@ const Categories = ({ params, searchParams }) => {
 
   return (
     <div className="bg-white max-w-[350px] lg:min-w-[350px] w-full rounded-[10px] shadow">
-      <div className="bg-primary rounded-t-[10px] text-[17px] text-center ">
-        <h3 className="font-semibold py-1">Categories</h3>
+      <div className="bg-primary lg:rounded-t-[10px] text-[17px] text-center ">
+        <h3 className="font-semibold py-1 flex items-center lg:justify-center justify-between">
+          <span>Categories</span>
+          <RxCross2
+            onClick={() => setShowCategories(false)}
+            className="lg:hidden text-white text-2xl"
+          />
+        </h3>
       </div>
-      <div className="px-3 pb-8">
+      <div className="px-3 pb-8 relative">
         <form
           action="#"
           className="my-3 shadow rounded-lg"
@@ -86,9 +94,7 @@ const Categories = ({ params, searchParams }) => {
             </div>
           ) : (
             filteredCategories.map((category, index) => (
-              <div key={category?.id} 
-              id={"cat"+category?.cat_id}
-              >
+              <div key={category?.id} id={"cat" + category?.cat_id}>
                 <div
                   onClick={() => handleCategoryClick(category)}
                   className="flex items-center justify-between p-2 rounded-[10px] hover:bg-[#E8F0F5] transition-colors duration-500">

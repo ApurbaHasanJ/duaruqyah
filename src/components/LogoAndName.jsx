@@ -3,7 +3,7 @@ import React from "react";
 
 const LogoAndName = () => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-3 ">
       <Image
         className="rounded-xl shadow-md shadow-green-100"
         width={48}
@@ -11,7 +11,7 @@ const LogoAndName = () => {
         src="/logo.png"
         alt="Dua's logo"
       />
-      <span className="hidden text-xl font-medium">Dua & Ruqyah</span>
+      <span className="lg:hidden text-xl font-medium">Dua & Ruqyah</span>
     </div>
   );
 };

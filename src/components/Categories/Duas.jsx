@@ -9,7 +9,7 @@ const Duas = ({ params, searchParams }) => {
   const router = useRouter();
 
   const filteredDuas = duas.filter((dua) => dua.cat_id == searchParams.subcat);
-  console.log({ filteredDuas });
+  // console.log({ filteredDuas });
 
   const handleDuaClick = (duaId) => {
     if (duaId) {

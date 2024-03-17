@@ -1,31 +1,34 @@
 "use client"
 import Categories from "@/components/Categories/Categories";
 import Settings from "@/components/Settings/Settings";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 // import { useRouter } from "next/router";
 import React, { useEffect } from "react";
+import { FaChevronRight } from "react-icons/fa";
 
 const Duas = () => {
-  const router = useRouter();
-  console.log(router);
+  const pathname = usePathname()
+  const router = useRouter()
+  console.log(pathname);
 
   useEffect(() => {
-    if (router.pathname === "/duas") {
+    if (pathname === "/duas") {
       router.push(`/duas/dua's-importance?cat=1`);
     }
-  }, [router]);
+  }, [router, pathname]);
 
   return (
-    <section className="w-full mt-4 flex gap-7">
-      {/* <Categories/>
-      <div className=" w-full">
-        <h4 className="lg:font-semibold bg-white text-desc w-full shadow-md p-5 rounded-lg">
-          <span className="text-primary ">Section:</span> Dua while hearing the
-          adhaan
-        </h4>
-      </div>
-      <Settings/> */}
-    </section>
+    <main className="h-screen flex justify-center items-center">
+      {/* <Link
+        href={`/duas/${catName}?cat=${catId}`}
+        className="bg-primary">
+        <button className="flex gap-3 items-center">
+          <span>Go To Dua&apos;s Page</span>
+          <FaChevronRight className="animate-pulse" />
+        </button>
+      </Link> */}
+    </main>
   );
 };
 

@@ -34,7 +34,7 @@ const Contents = ({ params, searchParams }) => {
 
   return (
     <section
-      className=" w-full grid grid-cols-1 gap-4 overflow-y-scroll h-[calc(100dvh-110px)] "
+      className=" w-full z-0 grid grid-cols-1 gap-4 overflow-y-scroll h-[calc(100dvh-110px)] "
       style={{ scrollbarWidth: "thin" }}>
       {subCategories.map((subCat) => {
         // Filter duas for the current subcategory

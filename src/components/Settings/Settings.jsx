@@ -4,7 +4,7 @@ import { RxDashboard } from "react-icons/rx";
 
 const Settings = () => {
   return (
-    <aside className="bg-white py-7 px-3 h-full max-w-[300px] w-full rounded-[32px]">
+    <aside className="bg-white z-50 py-7 px-3 h-full w-[260px]  lg:rounded-[32px] lg:border-none border  rounded-b-lg">
       <h3 className="text-xl font-bold text-center">Settings</h3>
       <div className="grid grid-cols-1 gap-4 mt-5">
         <div className="bg-[#F7F8FA] flex items-center gap-4 py-2 px-3 rounded-md">
